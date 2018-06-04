@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar color="secondary">
+      <ion-title>Registro</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list>
+  
+      <form #form="ngForm" (ngSubmit)="registrar(form)">
+  
+        <ion-item>
+          <ion-label stacked>Nome</ion-label>
+          <ion-input type="text" name="nome" ngModel></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label stacked>E-mail</ion-label>
+          <ion-input type="email" name="email" ngModel></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label stacked>Senha</ion-label>
+          <ion-input type="password" name="senha" ngModel></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <button ion-button block>Registrar</button>
+        </ion-item>
+      </form>
+  
+    </ion-list>
+  </ion-content>

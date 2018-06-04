@@ -1,0 +1,27 @@
+<ion-menu [content]="content">
+    <ion-header>
+      <ion-toolbar color="secondary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <button ion-item menuClose (click)="openListaParceiros()">
+          Home
+        </button>
+        <!--<button ion-item menuClose (click)="openPerfil()">-->
+          <button ion-item menuClose (click)="openListaParceiros()">
+          Perfil
+        </button>
+        <!--<button ion-item menuClose (click)="openMinhasEntregas()">-->
+        <button ion-item menuClose (click)="openListaParceiros()">
+          Minhas Entregas
+        </button>         
+        <button ion-item menuClose (click)="openCadastroParceiro()">
+          Seja um Parceiro
+        </button>      
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  <ion-nav id="nav" #content [root]="rootPage"></ion-nav>

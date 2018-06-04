@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-navbar color="secondary">
+      <ion-title>Editar</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list>
+  
+      <form #form="ngForm" (ngSubmit)="salvar(form)">
+        <ion-item>
+          <ion-label stacked>Nome</ion-label>
+          <ion-input type="text"  [(ngModel)]="parceiro.nome" name="nome"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label stacked>Veículo</ion-label>
+          <ion-input type="text" [(ngModel)]="parceiro.veiculo" name="veiculo" ngModel></ion-input>
+        </ion-item>   
+  
+        <ion-item>
+          <ion-label stacked>Placa</ion-label>
+          <ion-input type="text" [(ngModel)]="parceiro.placa" name="placa" ngModel></ion-input>
+        </ion-item>         
+  
+        <ion-item>
+          <button ion-button block color="secondary">Salvar</button><!--full, outline-->
+        </ion-item>  
+      </form>
+  
+    </ion-list>
+  </ion-content>
