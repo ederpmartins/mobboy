@@ -6,39 +6,43 @@
         </button>
       </ion-buttons>
       <ion-title>Novo</ion-title>
-  
+
     </ion-navbar>
   </ion-header>
-  
+
   <ion-content>
     <ion-list>
-  
-      <form #form="ngForm" (ngSubmit)="salvar(form)">    
+
+      <form #form="ngForm" (ngSubmit)="salvar(form)">
         <ion-item>
           <ion-label stacked>Nome</ion-label>
           <ion-input type="text" name="nome" ngModel></ion-input>
         </ion-item>
-        
+
         <ion-item>
           <ion-label stacked>Veículo</ion-label>
           <!-- <ion-input type="text" name="veiculo" ngModel></ion-input> -->
           <ion-select name="veiculo" ngModel>
             <ion-option value="Bike">Bicicleta</ion-option>
+            <ion-option value="Caminhao">Caminhão</ion-option>
+            <ion-option value="Carro">Carro</ion-option>
+            <ion-option value="Helicoptero">Helicóptero</ion-option>
+            <ion-option value="Moto">Moto</ion-option>
           </ion-select>
-        </ion-item>   
-  
+        </ion-item>
+
         <ion-item>
           <ion-label stacked>Placa</ion-label>
           <ion-input type="text" name="placa" ngModel></ion-input>
-        </ion-item>         
-  
+        </ion-item>
+
         <ion-item>
           <button ion-button block color="secondary">Salvar</button><!--full, outline-->
-        </ion-item>     
+        </ion-item>
       </form>
   <!--
       <button ion-button (click)="getLocation()">Get Location</button>
       {{lat}} / {{lng}}
   -->
     </ion-list>
-  </ion-content>  
+  </ion-content>
