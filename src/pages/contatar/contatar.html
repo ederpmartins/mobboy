@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-navbar color="secondary">
+        <ion-title>Solicitar Coleta</ion-title>
+    </ion-navbar>
+</ion-header>
+      
+    <ion-content>
+    <ion-list>
+      
+        <!-- <form #form="ngForm"> -->
+        <ion-avatar class="avatar">
+            <img width="150" height="150" src="./assets/icons/{{parceiro.veiculo}}.png"/>
+        </ion-avatar>              
+
+        <ion-item>
+            <!-- <ion-label stacked>Nome</ion-label>
+            <ion-input type="text" readonly="true" [(ngModel)]="parceiro.nome" name="nome"></ion-input> -->
+            <p>Nome</p>
+            <h2>{{parceiro.nome}}</h2>
+        </ion-item>
+        
+        <ion-item>
+            <!-- <ion-label stacked>Veículo</ion-label> -->
+            <!-- <ion-input type="text" readonly="true" [(ngModel)]="parceiro.veiculo" name="veiculo" ngModel></ion-input> -->
+            <p>Veículo</p>
+            <h2>{{parceiro.veiculo}}</h2>            
+        </ion-item>   
+    
+        <ion-item>
+            <!-- <ion-label stacked>Placa</ion-label> -->
+            <!-- <ion-input type="text" readonly="true" [(ngModel)]="parceiro.placa" name="placa" ngModel></ion-input> -->
+            <p>Placa</p>
+            <h2>{{parceiro.placa}}</h2>            
+        </ion-item>         
+    
+        <ion-item>
+            <button ion-button block type="button" (click)="openListaParceiros();" color="secondary">Solicitar</button><!--full, outline-->
+        </ion-item>  
+        <!-- </form> -->
+    
+    </ion-list>
+    </ion-content>

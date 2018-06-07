@@ -10,15 +10,15 @@
         <ion-icon name="log-out"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-title>Parceiros</ion-title>
+    <ion-title>Entregadores</ion-title>
   </ion-toolbar>
 </ion-header>  
 
 <ion-content>
 
   <ion-list> 
-
-    <ion-item *ngFor="let parceiro of lista" (click)="gerenciar(parceiro.id)">
+    <!-- <ion-item *ngFor="let parceiro of lista" (click)="gerenciar(parceiro.id)"> -->
+    <ion-item *ngFor="let parceiro of lista" (click)="contatar(parceiro.id)">
       <ion-avatar item-start>
      <img src="./assets/icons/{{parceiro.veiculo}}.png"/>
           <!-- <img [src]="parceiro.imagem"/> -->
@@ -26,9 +26,8 @@
       <h2>{{parceiro.nome}}</h2>
           <!-- <p *ngIf="parceiro.latitude">{{parceiro.latitude}}</p> -->
           <!-- <p *ngIf="!parceiro.latitude">(sem latitude)</p> -->
-          <p>{{parceiro.km | number:'0.1-2'}} km</p>
+          <p>{{parceiro.km | number:'0.1-1'}} km</p>
     
-        
     </ion-item>
 
   </ion-list>

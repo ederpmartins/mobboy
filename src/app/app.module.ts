@@ -14,6 +14,9 @@ import { Login } from '../pages/login/login';
 import { Registro } from '../pages/registro/registro';
 import { Edita } from '../pages/edita/edita';
 import { MenuComponent } from '../pages/menu/menu';
+import { Contatar } from '../pages/contatar/contatar';
+import { Perfil } from '../pages/perfil/perfil';
+import { Sobre } from '../pages/sobre/sobre';
 
 import { Geolocation } from '@ionic-native/geolocation';
 import { HaversineService } from "ng2-haversine";
@@ -35,7 +38,10 @@ const config = {
     CadastroParceiro,
     Registro,
     Edita, 
-    MenuComponent
+    MenuComponent,
+    Contatar,
+    Perfil,
+    Sobre
   ],
   imports: [
     BrowserModule,
@@ -52,7 +58,10 @@ const config = {
     Login, 
     Registro,
     Edita,
-     MenuComponent
+    MenuComponent,
+    Contatar,
+    Perfil,
+    Sobre
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},

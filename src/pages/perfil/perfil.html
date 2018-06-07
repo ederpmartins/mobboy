@@ -1,0 +1,35 @@
+<ion-header>
+     <ion-navbar color="secondary">
+        <ion-buttons left>
+            <button ion-button icon-only menuToggle>
+                <ion-icon name="menu"></ion-icon>
+            </button>
+         </ion-buttons>         
+          <ion-title>Perfil</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+    
+    <!-- <form #form="ngForm" (ngSubmit)="salvar(form)"> -->
+    <ion-item>
+        <!-- <ion-label stacked>Nome</ion-label>
+        <ion-input type="text" [(ngModel)]="usuario.nome" name="nome"></ion-input> -->
+        <p>Nome</p>
+        <h2>{{usuario.nome}}</h2>
+    </ion-item>
+    
+    <ion-item>
+        <!-- <ion-label stacked>Email</ion-label>
+        <ion-input type="text" readonly="true" [(ngModel)]="usuario.email" name="email"></ion-input> -->
+        <p>Email</p>
+        <h2>{{usuario.email}}</h2>        
+    </ion-item>   
+    <ion-item>
+        <button ion-button block type="button" (click)="openListaParceiros();" color="secondary">Voltar</button><!--full, outline-->
+    </ion-item>   
+    <!-- </form> -->
+
+</ion-list>
+</ion-content>

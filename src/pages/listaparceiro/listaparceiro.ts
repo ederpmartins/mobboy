@@ -7,6 +7,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Edita } from '../edita/edita';
+import { Contatar } from '../contatar/contatar';
 import { Geolocation } from '@ionic-native/geolocation';
 import { HaversineService, GeoCoord } from "ng2-haversine";
 
@@ -81,24 +82,24 @@ export class ListaParceiroPage {
     });
   }  
 
-tryHaversine(): void {
+// tryHaversine(): void {
  
-    let inicio: GeoCoord = {
-        latitude: this.latOri,
-        longitude: this.lngOri
-    };
+//     let inicio: GeoCoord = {
+//         latitude: this.latOri,
+//         longitude: this.lngOri
+//     };
  
-    let fim: GeoCoord = {
-        latitude: 43.262985,
-        longitude: -2.935013
-    };
+//     let fim: GeoCoord = {
+//         latitude: 43.262985,
+//         longitude: -2.935013
+//     };
 
-    this.kilometers = this._haversineService.getDistanceInKilometers(inicio, fim);
+//     this.kilometers = this._haversineService.getDistanceInKilometers(inicio, fim);
 
-    console.log(`
-        The distance between Madrid and Bilbao is:
-    `);
-}  
+//     console.log(`
+//         The distance between Madrid and Bilbao is:
+//     `);
+// }  
 
 
    public add() : void{
@@ -109,29 +110,33 @@ tryHaversine(): void {
      this.afAuth.auth.signOut();
    }
 
-   public gerenciar (id: string): void{
-     this.asCtrl.create({
-       buttons:[
-         {
-         text: "Apagar",
-         role:"destructive",
-         handler:()=>{
-           this.db.doc("Parceiro/"+ id).delete();
-         }
-       },
-       {
-         text: "Editar",
-         handler:()=>{
-           this.nvCtrl.push(Edita,{id: id});
-         }
-       },
-       {
-       text:"Cancelar",
-       role:"cancel"
-       }
-       ]
-     }).present();
-   }  
+  //  public gerenciar (id: string): void{
+  //    this.asCtrl.create({
+  //      buttons:[
+  //        {
+  //        text: "Apagar",
+  //        role:"destructive",
+  //        handler:()=>{
+  //          this.db.doc("Parceiro/"+ id).delete();
+  //        }
+  //      },
+  //      {
+  //        text: "Editar",
+  //        handler:()=>{
+  //          this.nvCtrl.push(Edita,{id: id});
+  //        }
+  //      },
+  //      {
+  //      text:"Cancelar",
+  //      role:"cancel"
+  //      }
+  //      ]
+  //    }).present();
+  //  }  
+
+  public contatar (id: string): void{
+    this.nvCtrl.push(Contatar,{id: id});
+   }    
 
 }
 

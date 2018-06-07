@@ -5,15 +5,18 @@ import { Login } from '../pages/login/login';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { MenuComponent } from '../pages/menu/menu';
 
+import { AngularFirestore } from 'angularfire2/firestore';
+
 @Component({
   templateUrl: 'app.html'
 })
+
 export class MyApp {
   rootPage:any;// = LoginPage; //ListaClientePage;
 
   constructor(platform: Platform,
               private afAuth: AngularFireAuth) {
-
+                
     platform.ready().then(() => {
 
       afAuth.authState.subscribe((auth) => {
@@ -24,5 +27,5 @@ export class MyApp {
         }
       })
     });
-  }
+  }  
 }
